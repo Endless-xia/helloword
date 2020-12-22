@@ -98,7 +98,9 @@
             alert("请先登录");
             location.href="index.html";
         }
-        document.getElementById("username").innerHTML = "欢迎你,"+location.href.split("?")[1];
+        var username=location.href.split("?")[1].split("&")[0];
+        username=window.decodeURI(username);
+        document.getElementById("username").innerHTML = "欢迎你,"+username;
     </script>
 </body>
 </html>
