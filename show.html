@@ -37,7 +37,10 @@
     </header>
     <div class="container-fluid">
         <main class="tm-main">
+            <div id="username"></div>
+            <div style="float: right"><a href="index.html">退出</a></div>
             <h3 style="font-weight: bolder;margin-left: 250px" >各类高校专业</h3>
+
             <!-- Search form -->
                 <div>
                     <a href="https://www.tsinghua.edu.cn/jyjx1/bksjy/bkzy1.htm">清华大学</a>
@@ -93,8 +96,9 @@
     <script>
         if (location.href.split("?")[1]==""){
             alert("请先登录");
-            location.href="login.html";
+            location.href="index.html";
         }
+        document.getElementById("username").innerHTML = "欢迎你,"+location.href.split("?")[1];
     </script>
 </body>
 </html>
